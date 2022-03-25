@@ -6,13 +6,17 @@ Setup for automatic code formatting and linting for code consistency throughout 
 - For formatting [Prettier](https://prettier.io/docs/en/install.html) is used. To make prettier work with ESLint, you need to install the [eslint-plugin-prettier](https://github.com/prettier/eslint-config-prettier#installation) is used.
 - For automatically formatting the git staged files [Husky](https://typicode.github.io/husky/#/?id=automatic-recommended) and [lint-staged](https://github.com/okonet/lint-staged#readme) are used
 
+---
+
 ### Install Packages
 
 ```js
   npm install --save-dev prettier eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin husky lint-staged eslint-config-prettier
 ```
 
-### Config files
+---
+
+### Configuration
 
 1. Add `.prettierrc.json` file with some rules like following:
 
@@ -57,6 +61,8 @@ Setup for automatic code formatting and linting for code consistency throughout 
 }
 ```
 
+---
+
 ### Enable husky and lint-staged
 
 1. Run following script to enable husky, [more info](https://typicode.github.io/husky/#/?id=automatic-recommended):
@@ -93,6 +99,8 @@ npx husky add .husky/pre-commit "npx lint-staged"
 ```
 
 This will add a git hook to run `npx lint-staged` before commit.
+
+---
 
 ### Add vscode project setting for formatting
 
