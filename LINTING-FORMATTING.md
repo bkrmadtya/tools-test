@@ -2,7 +2,7 @@
 
 Setup for automatic code formatting and linting for code consistency throughout the code base.
 
-- For linting ESLint, [TypeScript ESlint](https://typescript-eslint.io/docs/linting/) is used
+- For linting [ESLint](https://eslint.org/docs/user-guide/getting-started) and [TypeScript ESlint](https://typescript-eslint.io/docs/linting/) is used
 - For formatting [Prettier](https://prettier.io/docs/en/install.html) is used. To make prettier work with ESLint, you need to install the [eslint-plugin-prettier](https://github.com/prettier/eslint-config-prettier#installation) is used.
 - For automatically formatting the git staged files [Husky](https://typicode.github.io/husky/#/?id=automatic-recommended) and [lint-staged](https://github.com/okonet/lint-staged#readme) are used
 
