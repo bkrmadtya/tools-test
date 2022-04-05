@@ -71,7 +71,7 @@ Setup for automatic code formatting and linting for code consistency throughout 
 npx husky-init && npm install
 ```
 
-It will create `.husky` dir with its scripts and add `"prepare: husky install"` script in `package.json` file.
+It will create `.husky` dir with its script and a `pre-commit` hook file with `npm test`. Also add `"prepare: husky install"` script in `package.json` file.
 
 2. Add following in `package.json` file:
 
@@ -92,13 +92,7 @@ It will create `.husky` dir with its scripts and add `"prepare: husky install"` 
 
 It will format the git staged files and commit them, if you run `npx lint-staged`.
 
-3. Run following script to add a git hook:
-
-```js
-npx husky add .husky/pre-commit "npx lint-staged"
-```
-
-This will add a git hook to run `npx lint-staged` before commit.
+3. Edit `.husky/pre-commit` file and change `npm test` to `npx lint-staged`. This will code formatting before commit.
 
 ---
 
