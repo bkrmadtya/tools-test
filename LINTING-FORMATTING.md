@@ -92,7 +92,13 @@ It will create `.husky` dir with its script and a `pre-commit` hook file with `n
 
 It will format the git staged files and commit them, if you run `npx lint-staged`.
 
-3. Edit `.husky/pre-commit` file and change `npm test` to `npx lint-staged`. This will code formatting before commit.
+3. Go to `.husky/pre-commit` file and make sure the content of the file look like following:
+```bash
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+npx lint-staged
+```
 
 ---
 
