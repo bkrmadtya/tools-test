@@ -1,10 +1,17 @@
 import useDelayed from '../hooks/useDelayed';
 
-const Delayed = ({ latency }: { latency: number }) => {
+type DeplayedProps = {
+  latency: number;
+  testId: string;
+};
+
+const Delayed = ({ latency, testId }: DeplayedProps) => {
   const { data } = useDelayed(latency);
 
   return (
-    <div data-testid="delayed-component">{data ? <p>{JSON.stringify(data)}</p> : 'loading'}</div>
+    <div data-testid={testId}>
+      <p>{data && data.greeting}</p>
+    </div>
   );
 };
 

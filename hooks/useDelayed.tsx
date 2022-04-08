@@ -1,6 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
 
-const useDelayed = (latency: number) => {
+type Response = {
+  greeting: string;
+};
+
+const useDelayed = (latency: number): { data: Response | undefined } => {
   const [data, setData] = useState();
 
   const fetchData = useCallback(async () => {
