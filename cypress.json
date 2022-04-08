@@ -1,0 +1,15 @@
+{
+  "baseUrl": "http://localhost:3000",
+  "blockHosts": [
+    "*google-analytics.com",
+    "eventtags.aller.fi",
+    "cdn.pushpushgo.com",
+    "cdn.bluebillywig.com"
+  ],
+  "fixturesFolder": "tests/cypress/fixtures",
+  "integrationFolder": "tests/cypress/integration",
+  "pluginsFile": "tests/cypress/plugins",
+  "screenshotsFolder": "tests/cypress/screenshots",
+  "supportFile": "tests/cypress/support",
+  "videosFolder": "tests/cypress/videos"
+}
