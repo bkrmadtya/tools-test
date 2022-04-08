@@ -1,15 +1,16 @@
 import useDelayed from '../hooks/useDelayed';
 
 type DeplayedProps = {
+  className: string;
   latency: number;
   testId: string;
 };
 
-const Delayed = ({ latency, testId }: DeplayedProps) => {
+const Delayed = ({ className, latency, testId }: DeplayedProps) => {
   const { data } = useDelayed(latency);
 
   return (
-    <div data-testid={testId}>
+    <div className={data && className} data-testid={testId}>
       <p>{data && data.greeting}</p>
     </div>
   );
