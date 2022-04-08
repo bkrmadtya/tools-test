@@ -11,5 +11,6 @@
   "pluginsFile": "tests/cypress/plugins",
   "screenshotsFolder": "tests/cypress/screenshots",
   "supportFile": "tests/cypress/support",
-  "videosFolder": "tests/cypress/videos"
+  "videosFolder": "tests/cypress/videos",
+  "retries": 3
 }
