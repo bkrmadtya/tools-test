@@ -19,18 +19,16 @@ const DelayedPage = ({ count, latency }: DelayedProps) => {
       </Head>
 
       <main className={styles.main}>
-        <h4 className={styles.title} data-testid="delayed-page-title">
+        <h1 className={styles.title} data-testid="delayed-page-title">
           Here are some delayed contents
-        </h4>
+        </h1>
+        <p className={styles.code}>Count: {count}</p>
+        <p className={styles.code}>Latency: {latency}</p>
+
         {Array(count)
           .fill(0)
           .map((_, i) => (
-            <Delayed
-              className={styles.card}
-              key={i}
-              testId={`delayed-component-${i + 1}`}
-              latency={latency}
-            />
+            <Delayed className={styles.card} key={i} position={i + 1} latency={latency} />
           ))}
       </main>
     </div>
